@@ -1,7 +1,9 @@
-[![CircleCI](https://circleci.com/gh/craftninja/exp-starter-api.svg?style=shield)](https://circleci.com/gh/craftninja/exp-starter-api)
-[![Code Climate](https://codeclimate.com/github/craftninja/exp-starter-api/badges/gpa.svg)](https://codeclimate.com/github/craftninja/exp-starter-api)
-[![Test Coverage](https://codeclimate.com/github/craftninja/exp-starter-api/badges/coverage.svg)](https://codeclimate.com/github/craftninja/exp-starter-api/coverage)
-[![Issue Count](https://codeclimate.com/github/craftninja/exp-starter-api/badges/issue_count.svg)](https://codeclimate.com/github/craftninja/exp-starter-api)
+OMG yall, this is about to be GraphQL-ified!!! Hold on to your routes!
+
+[![CircleCI](https://circleci.com/gh/craftninja/exp-starter-api-graphql.svg?style=shield)](https://circleci.com/gh/craftninja/exp-starter-api-graphql)
+[![Code Climate](https://codeclimate.com/github/craftninja/exp-starter-api-graphql/badges/gpa.svg)](https://codeclimate.com/github/craftninja/exp-starter-api-graphql)
+[![Test Coverage](https://codeclimate.com/github/craftninja/exp-starter-api-graphql/badges/coverage.svg)](https://codeclimate.com/github/craftninja/exp-starter-api-graphql/coverage)
+[![Issue Count](https://codeclimate.com/github/craftninja/exp-starter-api-graphql/badges/issue_count.svg)](https://codeclimate.com/github/craftninja/exp-starter-api-graphql)
 
 
 # README
