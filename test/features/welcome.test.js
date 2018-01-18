@@ -14,4 +14,13 @@ describe('Root of API', () => {
 
     expect(res.body).toEqual({ data: { hello: 'oh hai' } });
   });
+
+  it('400s with incorrect sent data', async () => {
+    const res = await request(app)
+      .get('/')
+      .send({query: '{ haaaay }'})
+      .expect(400);
+
+    expect(res.body.errors[0].message).toEqual('Cannot query field "haaaay" on type "Query".');
+  });
 });
