@@ -5,7 +5,6 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const logger = require('morgan');
 
-const index = require('./routes/index');
 const login = require('./routes/login');
 const users = require('./routes/users');
 
@@ -16,7 +15,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', index);
 app.use('/login', login);
 app.use('/users', users);
 
@@ -29,11 +27,11 @@ const schema = buildSchema(`
 
 const root = {
   hello: () => {
-    return 'Hello world!';
+    return 'oh hai';
   },
 };
 
-app.use('/graphql', graphqlHTTP({
+app.use('/', graphqlHTTP({
   schema: schema,
   rootValue: root,
   graphiql: true,
