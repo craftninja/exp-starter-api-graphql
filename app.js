@@ -1,7 +1,9 @@
-const express = require('express');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const { buildSchema } = require('graphql');
+const cookieParser = require('cookie-parser');
+const express = require('express');
+const graphqlHTTP = require('express-graphql');
+const logger = require('morgan');
 
 const index = require('./routes/index');
 const login = require('./routes/login');
@@ -17,6 +19,26 @@ app.use(cookieParser());
 app.use('/', index);
 app.use('/login', login);
 app.use('/users', users);
+
+// BEGIN GraphQL stuff OMG IT'S NOT TESTED RUUUUUN
+const schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+const root = {
+  hello: () => {
+    return 'Hello world!';
+  },
+};
+
+app.use('/graphql', graphqlHTTP({
+  schema: schema,
+  rootValue: root,
+  graphiql: true,
+}));
+// END GraphQL stuff
 
 app.use(function(req, res, next) {
   const err = new Error('Not Found');
