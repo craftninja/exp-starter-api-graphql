@@ -2,8 +2,8 @@
 
 ## GraphQLyness
 
-* `curl -X POST -H "Content-Type: application/json" -d '{"query": "{ hello }"}' http://localhost:3001/graphql`
-* `curl -X POST -H "Content-Type: application/json" -d '{"query": "{ hello }"}' https://exp-starter-api.herokuapp.com/graphql`
+* `curl -H "Content-Type: application/json" -d '{"query": "{ hello }"}' http://localhost:3001/graphql`
+* `curl -H "Content-Type: application/json" -d '{"query": "{ hello }"}' https://exp-starter-api.herokuapp.com/graphql`
 
 ## RESTyness
 

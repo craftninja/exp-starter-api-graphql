@@ -20,7 +20,7 @@ app.use('/', index);
 app.use('/login', login);
 app.use('/users', users);
 
-// BEGIN GraphQL stuff OMG IT'S NOT TESTED RUUUUUN
+// BEGIN GraphQL stuff
 const schema = buildSchema(`
   type Query {
     hello: String
